@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,400;0,700;1,400&display=swap');
+
+/* Global */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Roboto Condensed', sans-serif;
+    background: #000;
+    color: #eee;
+    font-size: 100%;
+}
+
+h1 {
+    font-weight: 600;
+    font-size: 3rem;
+    margin-bottom: 3rem;
+}
+
+h2 {
+    font-weight: 600;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+a {
+    color: #eee;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 0.5em 1em;
+}
+
+a:focus {
+    outline: 4px solid #eee;
+}
+
+a:hover {
+    color: #fff;
+    outline: 4px solid #fff;
+}
+
+.vhidden {
+    height: 1px;
+    left: -10000px;
+    overflow: hidden;
+    position: absolute;
+    top: auto;
+    width: 1px;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.block-text {
+    display: block;
+    margin: 4em 0;
+}
+
+.content {
+    max-height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y proximity;
+    scroll-behavior: smooth;
+}
+
+@supports (-webkit-touch-callout: none) {
+    .content {
+        max-height: none;
+        overflow-y: auto;
+        scroll-snap-type: none;
+    }
+}
+
+.section {
+    max-width: 75rem;
+    margin: 0 auto;
+    min-height: 100vh;
+    padding: 4rem 1rem;
+    scroll-snap-align: start;
+}
+
+.section--auto-height {
+    min-height: 0;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: -10vh;
+    min-height: 110vh;
+    perspective: 75rem;
+    perspective-origin: center;
+}
+
+@media (min-width: 48rem) {
+    .hero {
+        margin-top: 0;
+        min-height: 100vh;
+    }
+}
+
+.hero__logo {
+    width: 80%;
+    max-width: 32rem;
+    transform-origin: center;
+    transition: all 300ms;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+
+.nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.nav li {
+    padding: 1rem 0;
+}
+
+@media (min-width: 48rem) {
+    .nav {
+        margin: 2rem 0;
+    }
+}
+
